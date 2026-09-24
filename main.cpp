@@ -1,61 +1,63 @@
-/*Martin Murimi
+/*Martin murimi
 
-  CT101/G/28946/25
+ CT101/G/28946/25.
 
-  Week 1: Task 2
+ Weekly assignment;
 
-  KIRINYAYA UNIVERSITY
-*/
+ week 1: Task 1.
 
-#include<iostream>
-#include<string>//required to handle multi-word string like name
+ KIRINYAGA UNIVERSITY:
+ */
+
+
+
+
+#include <iostream>
 using namespace std;
-int main ()
-{
-    string studentname;
-    string testresults;
-    int theorytestmarks;
-    int practicaltestmarks;
-    float averagescore;
 
-     //prompts the user to input the details
-    cout<<"student name:";
-    getline(cin, studentname);
+int main() {
+    //Declaring variables to store the given information.
+    string customer_name;
+    string phone_model;
+    int quantitybought;
+    float price_perphone;
+    float Total_salesAmount;
 
-    cout<<"theory test marks:";
-    cin>>theorytestmarks;
+    //prompting the user to enter the given details.
+    cout << "Customer name: ";
+    getline(cin,customer_name); /*it gets both names without having to
+    put horizontal tab on next task*/
+    cout << "Phone model: ";
+    cin >> phone_model ;
+    cout << "Quantity bought: ";
+    cin >> quantitybought ;
+    cout << "Price per phone: ";
+    cin >> price_perphone ;
+     //calculates the total sales.
+    Total_salesAmount = quantitybought * price_perphone;
+    //prompts the user to calculate the total sales.
+    cout << "Total sales Amount: ";
+    cin >> Total_salesAmount;
 
-    cout<<"practical test marks:";
-    cin>>practicaltestmarks;
-
-     averagescore= (theorytestmarks+practicaltestmarks) /2.0;
-    cout << "average score marks: ";
-    cin>>averagescore;
-
-    //A condition to determine whether a student has failed or not
-    if(averagescore>=50)
-{
-    testresults="Passed";
-}
-else{
-    testresults ="Failed";
-}
-    cout << endl;
-    //displays what was entered by the user.
-    cout<<"student name:"<<studentname<<endl;
-    cout<<"theory test marks:"<<theorytestmarks<<endl;
-    cout<<"practical test marks:"<<practicaltestmarks<<endl;
-    cout<<"average score:"<<averagescore<<endl;
-    cout<<"test results:"<<testresults<<endl;
-
-
-
-
+    cout << "           " << endl;
+    //displays a well formatted receipt showing the details
+    cout << "sales receipt" << endl;
+    cout << "=============" << endl;
+    cout << "Customer name: " << customer_name << endl;
+    cout << "=============" << endl;
+    cout << "phone model: " << phone_model << endl;
+    cout << "=============" << endl;
+    cout << "quantity bought: " << quantitybought << endl;
+    cout << "=================" << endl;
+    cout << "price per phone: " << price_perphone << endl;
+    cout << "=================" << endl;
+    cout << "Total sales Amount: " << Total_salesAmount << endl;
+    cout << "=================" << endl;
 
 
     return 0;
-
-
 }
+
+
 
 
